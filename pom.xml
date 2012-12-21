@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>example</groupId>
+    <artifactId>mqtt-example</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>MQTT Examples for Apache Apollo</name>
+    <description>Apache Apollo is a multi-protocol, high-performance, messaging server. Apollo supports the
+    MQTT protocol which is a binary, wire-level protocol optimized for limited-resource devices on unreliable
+    networks. These examples show some basic useage scenarios with the Java-based client lib,
+    mqtt-client which can be found at: https://github.com/fusesource/mqtt-client</description>
+
+    <modules>
+        <module>mqtt-example-pub-sub</module>
+        <module>mqtt-example-util</module>
+    </modules>
+
+    <properties>
+        <mqtt-client-version>1.4</mqtt-client-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.fusesource.mqtt-client</groupId>
+            <artifactId>mqtt-client</artifactId>
+            <version>${mqtt-client-version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
